@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.6.8 on linux)" generated="20200506 10:58:27.335" rpa="false">
+<suite id="s1" name="Runprocess" source="/Projects/robot_testing/runprocess.robot">
+<test id="s1-t1" name="Example">
+<kw name="Run Process" library="Process">
+<doc>Runs a process and waits for it to complete.</doc>
+<arguments>
+<arg>ansible-playbook</arg>
+<arg>/Projects/robot_testing/ansible/playbooks/configure.yaml</arg>
+</arguments>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20200506 10:58:27.473" level="INFO">Starting process:
+ansible-playbook /Projects/robot_testing/ansible/playbooks/configure.yaml</msg>
+<msg timestamp="20200506 10:58:27.480" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20200506 10:58:36.906" level="INFO">Process completed.</msg>
+<msg timestamp="20200506 10:58:36.907" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20200506 10:58:27.472" endtime="20200506 10:58:36.907"></status>
+</kw>
+<status status="PASS" starttime="20200506 10:58:27.466" endtime="20200506 10:58:36.908" critical="yes"></status>
+</test>
+<kw name="Terminate All Processes" library="Process" type="teardown">
+<doc>Terminates all still running processes started by this library.</doc>
+<arguments>
+<arg>kill=True</arg>
+</arguments>
+<status status="PASS" starttime="20200506 10:58:36.912" endtime="20200506 10:58:36.913"></status>
+</kw>
+<status status="PASS" starttime="20200506 10:58:27.341" endtime="20200506 10:58:36.913"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Runprocess">Runprocess</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
