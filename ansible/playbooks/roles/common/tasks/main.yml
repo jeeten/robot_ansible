@@ -1,2 +1,5 @@
 ---
 # tasks file for common
+- name: list file
+  command: ls -l /root
+#  register: mymotd
